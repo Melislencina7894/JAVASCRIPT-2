@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const products = [
+            { title: 'Burger', price: 121 },
+            { title: 'Pizza', price: 20 },
+        ];
+        //esto es para iterar, seleccionamos el div con document getElementById es para recuperar el app, es donde se
+        // va a hacer el renderizado
+        const app = document.getElementById('app');
+        products.forEach(product => {
+            //Ejecuto para renderizar
+            //agrego li con el nombre del producto. Concateno. Y recorremos objetos. para adjuntarlo al html 
+            
+            app.innerHTML += `<li>${product.title} - ${product.price}</li>`;
+        })
+    </script>
+</body>
+</html>
+
+//recorrido con foreach con render en html 
